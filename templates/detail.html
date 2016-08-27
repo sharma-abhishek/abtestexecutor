@@ -1,0 +1,25 @@
+<html>
+    <head><title>Detail | Test Executor</title></head>
+    <body>
+{% if test_detail  %}
+<h2>Details - Test Execution: {{ test_detail.id }}</h2>
+
+<dl>
+    <dt><b>ID</b></dt><dd>{{ test_detail.id }}</dd>
+    <dt><b>Environment ID</b></dt><dd>{{ test_detail.environment_id }}</dd>
+    <dt><b>Requester</b></dt><dd>{{ test_detail.requester }}</dd>
+    <dt><b>Start Time</b></dt><dd>{{ test_detail.start_time|date:"d.m.Y H:i:s" }} (UTC)</dd>
+    <dt><b>End Time</b></dt><dd>{{ test_detail.end_time|date:"d.m.Y H:i:s" }} (UTC)</dd>
+    <dt><b>Status</b></dt><dd>{{ test_detail.status }}</dd>
+    <dt><b>Output</b></dt>
+    <dd>
+        <div>
+            {{ test_detail.log|safe }}
+        </div>
+    </dd>   
+</dl>
+{% else %}
+    No details available for this test execution.
+{% endif %}
+    </body>
+</html>

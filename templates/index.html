@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Test Executor</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>         
+    </head>
+    <body>
+        <h3>Test Executor Web Application</h3>
+        <div>
+            <p>Create new test execution request</p>
+            <p><label for='requester'>Requester : </label><input name='requester' id='requester' /></p>
+            <p><label for='environment_id'>Environment ID : </label>
+            <select id='environment_id' name='environment_id'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+            </select>
+            </p>
+            <p><button type='submit' onClick='submitTestRequest()'>Submit</button>
+        </div>
+        <div id='results'>
+            
+        </div>
+        <script src="http://127.0.0.1:8000/static/js/app.js"></script>
+    </body>
+</html>
